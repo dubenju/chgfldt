@@ -290,8 +290,8 @@ int main(int argc, char* argv[]) {
     HANDLE hFile;
     int result = 0;
 
-    printf("Change File Date Time Version 0.0.1 Compiled on March 1 2017 for Windows\n");
-    printf("Copyright (C) 2017 Dubenju(dubenju@126.com). All rights reserved.\n\n");
+    printf("Change File Date Time Version 0.0.2 Compiled on May 6 2018 for Windows\n");
+    printf("Copyright (C) 2017-2018 Dubenju(dubenju@126.com). All rights reserved.\n\n");
 
     memset(pFileName, 0, sizeof(pFileName));
     memset(pCDate, 0, sizeof(pCDate));
@@ -354,7 +354,7 @@ int main(int argc, char* argv[]) {
                     FILE_SHARE_WRITE,
                     (LPSECURITY_ATTRIBUTES) NULL,
                     OPEN_EXISTING,
-                    FILE_ATTRIBUTE_NORMAL, // FILE_FLAG_BACKUP_SEMANTICS, // 
+                    FILE_FLAG_BACKUP_SEMANTICS, // FILE_ATTRIBUTE_NORMAL || 
                     (HANDLE) NULL);
     if (hFile == INVALID_HANDLE_VALUE) {
         printf("%s open error.\n", pFileName);
